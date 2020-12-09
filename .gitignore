@@ -1,0 +1,17 @@
+# directories
+node_modules
+
+# babel
+dist
+
+# env
+.env
+
+# npm
+package-lock.json
+
+# yarn
+yarn.lock
+
+# vscode
+.vscode
