@@ -1,0 +1,38 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start:dev": "babel-node --inspect app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dzidzileyla/node-template.git"
+  },
+  "author": "dzidzi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dzidzileyla/node-template/issues"
+  },
+  "homepage": "https://github.com/Dzidzileyla/node-template#readme",
+  "dependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "babel-jest": "^26.6.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^26.6.3"
+  }
+}
