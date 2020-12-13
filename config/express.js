@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import { returnError } from '../util/status.js';
-import {json, urlencoded} from 'body-parser';
+import { json, urlencoded } from 'body-parser';
 
 export default () => {
   const app = express();
