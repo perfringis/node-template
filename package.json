@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start:dev": "babel-node --inspect app.js",
+    "compile": "rm -r dist/ & babel . --config-file ./.babelrc --out-dir dist --ignore node_modules --source-maps",
     "test": "jest"
   },
   "repository": {
