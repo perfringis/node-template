@@ -1,15 +1,20 @@
-version: '2'
+version: '3.7'
 
 services:
   backend:
-    build: backend
     container_name: backend
+    image: node:14-alpine
     ports:
-      - 8080:8080
-      - 7979:7979
+      - 8081:8081
+    working_dir: /backend
     volumes:
-      - ./backend:/var/www/backend
-    tty: true
-    # change command path in future for inspect
-    command: node --inspect=0.0.0.0:7979 src/index.js
-    # in future add depends on db for example
+      - ./:/backend
+    environment:
+      NODE_ENV: dev
+    command: sh -c "yarn install && yarn run nodemon:dev"
+    networks:
+      - backend_network
+
+networks:
+  backend_network:
+    name: backend_network

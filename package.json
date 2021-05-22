@@ -4,16 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "rm -r dist/ & babel . --config-file ./.babelrc --out-dir dist --ignore node_modules --source-maps",
-    "start": "node dist/app.js",
-    "clean": "rm -r dist/",
+    "babel:build": "rm -r dist/ & babel . --config-file ./.babelrc -d dist",
+    "babel:start": "node dist/app.js",
+    "babel:prod": "yarn run babel:build && yarn run babel:start",
+    "babel:dev": "babel-node --inspect app.js 9229",
+    "nodemon:dev": "nodemon --inspect app.js 9229 --exec babel-node",
     "lint": "eslint . --ext .js",
     "lint:fix": "eslint . --ext .js --fix",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "snyk:run": "snyk test",
-    "snyk:auth": "snyk auth",
-    "debug": "babel-node --inspect app.js"
+    "snyk:auth": "snyk auth"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "eslint": "^7.20.0",
     "eslint-config-google": "^0.14.0",
     "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
     "synk": "^0.0.2"
   }
 }
