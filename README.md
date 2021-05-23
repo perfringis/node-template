@@ -12,12 +12,13 @@
 Ready to use Node.js project template.
 
 # Stack
-![Node.JS](https://img.shields.io/badge/Node.JS-339933?style=flat-square&logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
-![Babel](https://img.shields.io/badge/Babel-F9DC3E?style=flat-square&logo=babel&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2498ED?style=flat-square&logo=docker&logoColor=white)
-![GNU Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)
+
+[![Node.js][node-image]][node-url]
+[![Express][express-image]][express-url]
+[![Babel][babel-image]][babel-url]
+[![MongoDB][mongodb-image]][mongodb-url]
+[![Docker][docker-image]][docker-url]
+[![GNU Bash][bash-image]][bash-url]
 
 ## Development setup
 
@@ -27,21 +28,24 @@ Ready to use Node.js project template.
 git clone git@github.com:Dzidzileyla/node-template.git
 ```
 
-2. Run docker configuration for development stage:
+2. Configure `.env` file based on `.env.dev` template.
+
+3. Run docker configuration for development stage:
 
 ```sh
 docker-compose -f docker-compose-dev.yml up
 ```
 
-3. Using postman check 0.0.0.0:8081.
+4. Using `postman` check 0.0.0.0:8081.
 
-4. Ready to go!
+5. Ready to go!
 
 ## Licence
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-<!-- Markdown link & img dfn's -->
+<!-- Repository links -->
+
 [licence-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [licence-url]: https://github.com/Dzidzileyla/node-template/blob/main/LICENSE
 [stars-image]: https://img.shields.io/github/stars/dzidzileyla/node-template?style=flat-square
@@ -54,3 +58,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-url]: https://github.com/Dzidzileyla/node-template/issues
 [contributors-image]: https://img.shields.io/github/contributors/dzidzileyla/node-template?style=flat-square
 [contributors-url]: https://github.com/Dzidzileyla/node-template/graphs/contributors
+
+<!-- Stack -->
+
+[node-image]: https://img.shields.io/badge/Node.JS-339933?style=flat-square&logo=node.js&logoColor=white
+[node-url]: https://nodejs.org/en/
+[express-image]: https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white
+[express-url]: https://expressjs.com/
+[babel-image]: https://img.shields.io/badge/Babel-F9DC3E?style=flat-square&logo=babel&logoColor=white
+[babel-url]: https://babeljs.io/
+[mongodb-image]: https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white
+[mongodb-url]: https://www.mongodb.com/
+[docker-image]: https://img.shields.io/badge/Docker-2498ED?style=flat-square&logo=docker&logoColor=white
+[docker-url]: https://www.docker.com/
+[bash-image]: https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white
+[bash-url]: https://www.gnu.org/software/bash/
