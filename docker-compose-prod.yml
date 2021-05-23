@@ -10,8 +10,8 @@ services:
     volumes:
       - ./:/backend
     environment:
-      NODE_ENV: production
-    command: sh -c "yarn install --production && yarn run babel:prod"
+      NODE_ENV: prod
+    command: sh -c "yarn install --prod && yarn run babel:prod"
     networks:
       - backend_network
   mongodb:

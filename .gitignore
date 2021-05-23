@@ -14,5 +14,5 @@ package-lock.json
 yarn.lock
 yarn-error.log
 
-# monogdb
+# docker monogo db
 data
