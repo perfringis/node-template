@@ -13,3 +13,6 @@ package-lock.json
 # yarn
 yarn.lock
 yarn-error.log
+
+# monogdb
+data

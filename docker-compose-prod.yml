@@ -14,6 +14,22 @@ services:
     command: sh -c "yarn install --production && yarn run babel:prod"
     networks:
       - backend_network
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: db
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: root
+    networks:
+      - backend_network
+
+volumes:
+  mongodb:
 
 networks:
   backend_network:
