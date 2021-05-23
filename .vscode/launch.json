@@ -5,14 +5,35 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Attach",
+      "name": "Test debug - attach",
+      "port": 8228,
+      "request": "attach",
+      "type": "node"
+    },
+    {
+      "name": "Test debug - run",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "--inspect-brk",
+        "${workspaceRoot}/node_modules/.bin/jest",
+        "--runInBand",
+        "--detectOpenHandles"
+      ],
+      "envFile": "${workspaceFolder}/.env.dev",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 8228
+    },
+    {
+      "name": "Node debug - attach",
       "port": 9229,
       "request": "attach",
       "skipFiles": ["<node_internals>/**"],
       "type": "pwa-node"
     },
     {
-      "name": "Attach to Chrome",
+      "name": "Chrome debug - attach",
       "port": 9229,
       "request": "attach",
       "type": "pwa-chrome",

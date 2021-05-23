@@ -1,5 +1,5 @@
-import dotenv from 'dotenv';
-import { resolve } from 'path';
+const dotenv = require('dotenv');
+const { resolve } = require('path');
 
 dotenv.config({ path: resolve('.env') });
 
@@ -7,6 +7,6 @@ const env = process.env.NODE_ENV || 'dev';
 
 dotenv.config({ path: resolve(`.env.${env}`) });
 
-export default {
+module.exports = {
   root: resolve('./'),
 };

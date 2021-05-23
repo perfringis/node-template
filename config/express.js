@@ -1,10 +1,9 @@
-import express from 'express';
-import cors from 'cors';
-import helmet from 'helmet';
-import { returnError } from '../util/status.js';
-import { json, urlencoded } from 'body-parser';
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const { json, urlencoded } = require('body-parser');
 
-export default () => {
+module.exports = () => {
   const app = express();
 
   app.use(cors());
@@ -12,10 +11,10 @@ export default () => {
   app.use(json({ limit: '10mb', extended: true }));
   app.use(urlencoded({ limit: '10mb', extended: true }));
 
-  //json body verification
+  // json body verification
   app.use((error, req, res, next) => {
     if (error instanceof SyntaxError) {
-      return returnError(res, 'invalid request');
+      return res.status(406).json({ error });
     } else {
       next();
     }

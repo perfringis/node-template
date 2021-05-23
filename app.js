@@ -1,15 +1,15 @@
-import express from 'express';
-import config from './config';
+const express = require('express');
+const { port, host } = require('./config');
 
-import expressConfig from './config/express';
-import routersConfig from './router';
+const expressConfig = require('./config/express');
+const routersConfig = require('./router');
 
 const app = expressConfig();
 
 routersConfig(express, app);
 
-app.listen(config.port, config.host, () => {
+app.listen(port, host, () => {
   console.log('Application is running...');
 });
 
-export default app;
+module.exports = app;
