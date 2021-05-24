@@ -1,12 +1,24 @@
+const { resolve } = require('path');
+
+const {
+  app: { port, host },
+} = require(resolve('config'));
+const expressConfig = require(resolve('config/express'));
+const mongoose = require(resolve('config/mongoose'));
+
 const express = require('express');
-const { port, host } = require('./config');
-
-const expressConfig = require('./config/express');
-const routersConfig = require('./router');
-
+const routers = require(resolve('router'));
 const app = expressConfig();
 
-routersConfig(express, app);
+routers(express, app);
+
+mongoose
+  .then(conn => {
+    console.log('MongoDB connected...');
+  })
+  .catch(err => {
+    console.log(`MongoDB error ${err}`);
+  });
 
 app.listen(port, host, () => {
   console.log('Application is running...');

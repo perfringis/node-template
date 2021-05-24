@@ -12,8 +12,12 @@ services:
     environment:
       NODE_ENV: dev
     command: sh -c "yarn install && yarn run nodemon:dev"
+    tty: true
+    depends_on:
+      - mongodb
     networks:
       - backend_network
+
   mongodb:
     container_name: mongodb
     image: mongo

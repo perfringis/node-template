@@ -12,8 +12,11 @@ services:
     environment:
       NODE_ENV: prod
     command: sh -c "yarn install --prod && yarn run babel:prod"
+    depends_on:
+      - mongodb
     networks:
       - backend_network
+      
   mongodb:
     container_name: mongodb
     image: mongo
