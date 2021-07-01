@@ -16,6 +16,7 @@ Ready to use Node.js project template.
 [![Node.js][node-image]][node-url]
 [![Express][express-image]][express-url]
 [![Babel][babel-image]][babel-url]
+[![Jest][jest-image]][jest-url]
 [![MongoDB][mongodb-image]][mongodb-url]
 [![Docker][docker-image]][docker-url]
 [![GNU Bash][bash-image]][bash-url]
@@ -67,6 +68,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [express-url]: https://expressjs.com/
 [babel-image]: https://img.shields.io/badge/Babel-F9DC3E?style=flat-square&logo=babel&logoColor=white
 [babel-url]: https://babeljs.io/
+[jest-image]: https://img.shields.io/badge/Jest-F9DC3E?style=flat-square&logo=jest&logoColor=white
+[jest-url]: https://jestjs.io/
 [mongodb-image]: https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white
 [mongodb-url]: https://www.mongodb.com/
 [docker-image]: https://img.shields.io/badge/Docker-2498ED?style=flat-square&logo=docker&logoColor=white
