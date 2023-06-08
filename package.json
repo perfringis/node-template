@@ -37,7 +37,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.1",
-    "helmet": "^6.0.0",
+    "helmet": "^7.0.0",
     "lodash": "^4.17.20",
     "mongoose": "^7.2.1",
     "supertest": "^6.1.3"
